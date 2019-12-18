@@ -1,0 +1,259 @@
+body {
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1;
+  font-size: 15px;
+  text-align: center;
+  background-color: #f6f6fe;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.4em;
+  color: #494c5f;
+  margin: 1em;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+#top, #bottom {
+  position: relative;
+  z-index: -2;
+}
+
+#top img {
+  position: absolute;
+  -webkit-transform: translate(8px, -80px);
+          transform: translate(8px, -80px);
+}
+
+#bottom {
+  display: none;
+}
+
+header {
+  text-align: center;
+  z-index: 1;
+}
+
+#togglePlan {
+  display: none;
+}
+
+.switch {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  width: 45px;
+  height: 26px;
+  position: relative;
+  color: #b3b5c6;
+}
+
+.switch:hover {
+  opacity: 0.7;
+}
+
+.switch::before {
+  content: "Annually";
+  margin-left: -4.4rem;
+  padding-right: 0.5rem;
+}
+
+.switch::after {
+  content: "Monthly";
+  margin-left: 100%;
+  padding-left: 1em;
+}
+
+.switch > span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(90deg, #a3a8f0, #696fdd);
+}
+
+.switch > span, .switch label > span::before, .switch label::before, .switch label::after {
+  position: absolute;
+  border-radius: 1.9em;
+  font-size: 0.7rem;
+}
+
+.switch > span::before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  border-radius: 50%;
+  top: 2px;
+  right: 1px;
+  width: 22px;
+  height: 22px;
+}
+
+#togglePlan:checked ~ label > span::before {
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+}
+
+section {
+  width: 90%;
+  margin: 2em auto;
+  padding: 1.2rem;
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+section h2 {
+  margin-bottom: 2.5rem;
+}
+
+.basic-master {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0.5rem 2.5rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 2.5rem rgba(0, 0, 0, 0.15);
+  background-color: #FFFFFF;
+  padding: 1em 1.2em;
+  color: #6d708d;
+}
+
+.basic-master h2 {
+  font-size: 1.1rem;
+}
+
+.professional {
+  border-radius: 10px;
+  padding: 1em 1.2em;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(90deg, #a3a8f0, #696fdd);
+  color: #FFFFFF;
+  margin: 1.5rem 0;
+}
+
+.professional li {
+  border-bottom: 1px solid #FFF;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 1.30rem 0;
+  border-bottom: 1px solid rgba(179, 181, 198, 0.5);
+}
+
+.monthly, .annually {
+  font-size: 2.7rem;
+  padding: 0 0 0.4em;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.learn {
+  width: 90%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  padding: 1em;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(90deg, #a3a8f0, #696fdd);
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.learn:hover {
+  background: #ffffff;
+  border: 1px solid #696fdd;
+  color: #696fdd;
+}
+
+.professional .learn {
+  background: white;
+  color: #696fdd;
+}
+
+.professional .learn.learn:hover {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 1.6em;
+  }
+  #bottom {
+    display: block;
+  }
+  #top img {
+    top: 0;
+    right: 0;
+  }
+  #bottom img {
+    position: absolute;
+    -webkit-transform: translate(-40rem, -13rem);
+            transform: translate(-40rem, -13rem);
+  }
+  section {
+    padding: 1.2rem;
+    margin-top: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 75%;
+    margin: 2em auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .basic-master {
+    width: 33.33%;
+  }
+  .professional {
+    padding: 2em 1.5em;
+    width: 33.33%;
+  }
+  .monthly, .annually {
+    font-size: 3.7rem;
+    padding: 0 0 0.4em;
+  }
+  .learn {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

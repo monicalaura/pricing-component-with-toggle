@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scss/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <title>Frontend Mentor | Pricing component with toggle</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  
+  <div id="top">
+    <img src="images/bg-top.svg"  alt="top background design">
+  </div>
+
+  <header>
+    <h1>Our Pricing</h1>
+    <input type="checkbox" id="togglePlan" class="checkbox" />  
+      <label for="togglePlan" class="switch"><span></span></label>  
+    </header>
+
+    <section class ="plans">
+        
+        <div class= "basic-master">
+          <h2>Basic</h2>
+          
+        <ul>
+          <li class="monthly show">$19.99</li>
+          <li class="annually hide">$199.99</li>
+          <li>500 GB Storage</li>
+          <li>2 Users Allowed</li>
+          <li>Send up to 3 GB</li>
+        </ul>
+        <button class="learn" type="button" name="button">Learn More</button>
+        </div>
+
+        <div class= "professional">
+          <h2>Professional</h2>
+        <ul>
+          <li class="monthly show">$24.99</li>
+          <li class="annually hide">$249.9</li>
+          <li>1 TB Storage</li>
+          <li>5 Users Allowed</li>
+          <li>Send up to 10 GB</li>
+        </ul>
+        <button class="learn" type="button" name="button">Learn More</button>
+        </div> 
+
+        <div class= "basic-master">
+          <h2>Master</h2>
+        <ul>
+          <li class="monthly show">$39.99</li> 
+          <li class="annually hide">$399.99</li> 
+          <li>2 TB Storage</li>
+          <li>10 Users Allowed</li>
+          <li>Send up to 20 GB</li>
+        </ul>
+        <button class="learn" type="button" name="button">Learn More</button>
+        </div>
+    
+    </section>
+
+
+   <div id="bottom">
+    <img src="images/bg-bottom.svg" alt="bottom-image">
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/monicalaura">Monica Laura</a>.
+  </div>
+
+  <script>  
+    $('#togglePlan').change(function(){
+     if($(this).is(":checked")) {
+
+      $('.monthly').removeClass('show');
+        $('.monthly').addClass('hide');
+        $('.annually').addClass('show');      
+       
+    } else {
+      $('.monthly').addClass('show');
+      $('.annually').removeClass('show');     
+
+    }
+});
+  </script> 
+  
+</body>
+</html>
